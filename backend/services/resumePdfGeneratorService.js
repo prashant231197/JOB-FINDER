@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { chromium } = require('playwright');
+const { chromium } = require('./playwrightHelper');
 const groqService = require('./groqService');
 
 const OUTPUT_DIR = path.join(__dirname, '..', 'uploads', 'tailored_resumes');

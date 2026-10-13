@@ -1,3 +1,12 @@
+// Fix for Android / Termux: Playwright throws "Unsupported platform: android"
+if (process.platform === 'android') {
+  try {
+    Object.defineProperty(process, 'platform', { value: 'linux', configurable: true });
+  } catch (e) {
+    process.platform = 'linux';
+  }
+}
+
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
