@@ -120,7 +120,9 @@ class NaukriAutomationService {
           path: '/'
         }));
       } else if (typeof cookiesInput === 'string') {
-        const trimmed = cookiesInput.trim();
+        let trimmed = cookiesInput.trim();
+        trimmed = trimmed.replace(/^["']|["']$/g, '').trim();
+
         if (trimmed.startsWith('[') || trimmed.startsWith('{')) {
           const json = JSON.parse(trimmed);
           if (Array.isArray(json)) {
@@ -133,6 +135,14 @@ class NaukriAutomationService {
               path: '/'
             }));
           }
+        } else if (!trimmed.includes('=')) {
+          // Single token
+          parsed = [{
+            name: 'nps',
+            value: trimmed,
+            domain: '.naukri.com',
+            path: '/'
+          }];
         } else {
           // Parse standard raw browser cookie string: "name1=val1; name2=val2"
           parsed = trimmed.split(';').map(part => {
@@ -141,7 +151,7 @@ class NaukriAutomationService {
             const eqIdx = trimmedPart.indexOf('=');
             if (eqIdx === -1) return null;
             const k = trimmedPart.slice(0, eqIdx).trim();
-            const v = trimmedPart.slice(eqIdx + 1).trim();
+            const v = trimmedPart.slice(eqIdx + 1).trim().replace(/^["']|["']$/g, '');
             if (!k) return null;
             return {
               name: k,

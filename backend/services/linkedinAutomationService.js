@@ -152,7 +152,10 @@ class LinkedInAutomationService {
           path: '/'
         }));
       } else if (typeof cookiesInput === 'string') {
-        const trimmed = cookiesInput.trim();
+        let trimmed = cookiesInput.trim();
+        // Remove surrounding quotes if user copied "AQED..."
+        trimmed = trimmed.replace(/^["']|["']$/g, '').trim();
+
         if (trimmed.startsWith('[') || trimmed.startsWith('{')) {
           const json = JSON.parse(trimmed);
           if (Array.isArray(json)) {
@@ -165,15 +168,28 @@ class LinkedInAutomationService {
               path: '/'
             }));
           }
+        } else if (!trimmed.includes('=')) {
+          // User pasted raw li_at cookie value directly (e.g. AQEDATU5w...)
+          parsed = [{
+            name: 'li_at',
+            value: trimmed,
+            domain: '.linkedin.com',
+            path: '/'
+          }];
         } else {
           parsed = trimmed.split(';').map(part => {
             const p = part.trim();
             if (!p) return null;
             const eqIdx = p.indexOf('=');
-            if (eqIdx === -1) return null;
+            if (eqIdx === -1) {
+              if (p.length > 20) {
+                return { name: 'li_at', value: p.replace(/^["']|["']$/g, ''), domain: '.linkedin.com', path: '/' };
+              }
+              return null;
+            }
             return {
               name: p.slice(0, eqIdx).trim(),
-              value: p.slice(eqIdx + 1).trim(),
+              value: p.slice(eqIdx + 1).trim().replace(/^["']|["']$/g, ''),
               domain: '.linkedin.com',
               path: '/'
             };
