@@ -1,0 +1,45 @@
+{
+  "name": "qa-job-hunter-automation",
+  "version": "1.0.0",
+  "description": "QA Job Hunting and Application Automation Tool with semantic form filling, match scoring, and CAPTCHA safety circuit breaker",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev:backend": "node backend/server.js",
+    "dev:frontend": "vite --host 0.0.0.0",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "keywords": [
+    "qa",
+    "sdet",
+    "job-hunter",
+    "automation",
+    "playwright"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "html2pdf.js": "^0.14.0",
+    "lucide-react": "^0.441.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^10.0.10",
+    "playwright": "^1.47.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.6"
+  }
+}

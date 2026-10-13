@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QA Hunter - AI ATS Form Filler Bot</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      width: 400px;
+      max-height: 600px;
+      overflow-y: auto;
+      background: #090e17;
+      color: #f8fafc;
+      padding: 16px;
+    }
+
+    body::-webkit-scrollbar {
+      width: 6px;
+    }
+    body::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 3px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #1e293b;
+      margin-bottom: 12px;
+    }
+
+    .title-area {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .title {
+      font-size: 15px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+
+    .bot-notice {
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 11px;
+      color: #d8b4fe;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      line-height: 1.4;
+    }
+
+    /* Action Buttons */
+    .btn-primary {
+      width: 100%;
+      background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+    }
+
+    .btn-secondary {
+      width: 100%;
+      background: #0f172a;
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(56, 189, 248, 0.1);
+      color: #ffffff;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #1e293b;
+      margin-bottom: 12px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 8px 4px;
+      cursor: pointer;
+      text-align: center;
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .tab-btn.active {
+      color: #38bdf8;
+      border-bottom-color: #38bdf8;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Form Fields */
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 7px;
+      padding: 7px 9px;
+      font-size: 11px;
+      color: #f8fafc;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #38bdf8;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 55px;
+    }
+
+    .btn-save {
+      width: 100%;
+      background: #10b981;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 9px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .btn-save:hover {
+      background: #059669;
+    }
+
+    /* AI Answer Box */
+    .ai-output-box {
+      background: #0f172a;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 11px;
+      color: #e2e8f0;
+      line-height: 1.5;
+      margin-top: 8px;
+      display: none;
+      position: relative;
+    }
+
+    .ai-copy-btn {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      background: rgba(139, 92, 246, 0.3);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+      color: #c084fc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 9px;
+      cursor: pointer;
+    }
+
+    .notification {
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 11px;
+      margin-bottom: 10px;
+      display: none;
+      text-align: center;
+      font-weight: 600;
+    }
+    .notification.success {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .notification.info {
+      background: rgba(56, 189, 248, 0.2);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="title-area">
+      <span class="title">⚡ QA Hunter Bot</span>
+      <span class="badge">AI Copilot</span>
+    </div>
+    <span style="font-size: 10px; color: #64748b; font-family: monospace;">Alt+Shift+F</span>
+  </div>
+
+  <div class="bot-notice">
+    <span>🛡️</span>
+    <span><strong>AI AutoFill Active:</strong> Bot fills all fields & answers questions. Submit button is left for your manual click!</span>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="popup-notify" class="notification"></div>
+
+  <!-- Main 1-Click Action -->
+  <button id="btn-autofill-active" class="btn-primary">
+    <span>⚡ 1-Click AutoFill Current Tab</span>
+  </button>
+
+  <button id="btn-sync-local" class="btn-secondary">
+    <span>🔄 Sync Latest Profile (localhost:5000)</span>
+  </button>
+
+  <!-- Navigation Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="tab-profile">Profile</button>
+    <button class="tab-btn" data-tab="tab-experience">Work & Edu</button>
+    <button class="tab-btn" data-tab="tab-contacts">📞 HR Scraper</button>
+    <button class="tab-btn" data-tab="tab-ai">Groq AI</button>
+    <button class="tab-btn" data-tab="tab-settings">Settings</button>
+  </div>
+
+  <!-- Tab 1: Profile Quick View / Edit -->
+  <div id="tab-profile" class="tab-content active">
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" id="prof-firstName">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" id="prof-lastName">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="prof-email">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" id="prof-phone">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Current Location / City</label>
+        <input type="text" id="prof-currentLocation">
+      </div>
+      <div class="form-group">
+        <label>Postal / PIN Code</label>
+        <input type="text" id="prof-postalCode">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Current CTC</label>
+        <input type="text" id="prof-currentSalary">
+      </div>
+      <div class="form-group">
+        <label>Expected CTC</label>
+        <input type="text" id="prof-expectedSalary">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Notice Period (Days)</label>
+        <input type="text" id="prof-noticePeriodDays">
+      </div>
+      <div class="form-group">
+        <label>Notice Period Text</label>
+        <input type="text" id="prof-noticePeriod">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>LinkedIn URL</label>
+      <input type="url" id="prof-linkedIn">
+    </div>
+
+    <div class="form-group">
+      <label>GitHub URL</label>
+      <input type="url" id="prof-github">
+    </div>
+
+    <button id="btn-save-profile" class="btn-save">Save Profile Changes</button>
+  </div>
+
+  <!-- Tab 2: Work & Education -->
+  <div id="tab-experience" class="tab-content">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Current Company</label>
+        <input type="text" id="prof-currentCompany">
+      </div>
+      <div class="form-group">
+        <label>Current Title / Role</label>
+        <input type="text" id="prof-currentRole">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Total Experience (Yrs)</label>
+        <input type="text" id="prof-yearsOfExperience">
+      </div>
+      <div class="form-group">
+        <label>Employment Type</label>
+        <input type="text" id="prof-employmentType" value="Full-time">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>College / University</label>
+      <input type="text" id="prof-educationSchool">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Degree</label>
+        <input type="text" id="prof-educationDegree">
+      </div>
+      <div class="form-group">
+        <label>Graduation Year</label>
+        <input type="text" id="prof-educationGradYear">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Key Skills (Comma Separated)</label>
+      <textarea id="prof-skills" style="min-height: 50px;"></textarea>
+    </div>
+
+    <button id="btn-save-experience" class="btn-save">Save Work & Education</button>
+  </div>
+
+  <!-- Tab: Recruiter Email & Mobile Number Scraper -->
+  <div id="tab-contacts" class="tab-content">
+    <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.25); border-radius: 8px; padding: 8px; font-size: 11px; color: #38bdf8; margin-bottom: 10px; line-height: 1.4;">
+      🔍 Extract verified HR emails & mobile numbers from the active job post, LinkedIn post, or career page!
+    </div>
+
+    <button id="btn-scrape-active" class="btn-primary" style="margin-bottom: 10px; font-size: 11px; padding: 10px;">
+      <span>⚡ Scrape Contacts from Current Page</span>
+    </button>
+
+    <div id="scraped-results-box" style="display: none; background: #060a14; border: 1px solid #1e293b; border-radius: 8px; padding: 10px; margin-bottom: 12px;">
+      <div id="scraped-stats" style="font-size: 11px; font-weight: 700; color: #34d399; margin-bottom: 6px;"></div>
+      <div id="scraped-items-list" style="max-height: 160px; overflow-y: auto; font-size: 11px; display: flex; flex-direction: column; gap: 6px;"></div>
+    </div>
+
+    <!-- Company Recruiter Radar (OSINT) -->
+    <div style="border-top: 1px solid #1e293b; margin-top: 8px; padding-top: 10px;">
+      <label>Target Company Recruiter Radar</label>
+      <input type="text" id="radar-company-input" placeholder="e.g. Razorpay, PhonePe, CRED, Fiserv" style="margin-bottom: 8px;">
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+        <button id="btn-radar-linkedin" class="btn-secondary" style="margin: 0; padding: 7px 8px; font-size: 10px;">
+          <span>🔍 LinkedIn HRs</span>
+        </button>
+        <button id="btn-radar-naukri" class="btn-secondary" style="margin: 0; padding: 7px 8px; font-size: 10px;">
+          <span>⚡ Naukri HRs</span>
+        </button>
+        <button id="btn-radar-posts" class="btn-secondary" style="margin: 0; padding: 7px 8px; font-size: 10px;">
+          <span>💬 Hiring Posts</span>
+        </button>
+        <button id="btn-radar-mailboxes" class="btn-secondary" style="margin: 0; padding: 7px 8px; font-size: 10px;">
+          <span>✉️ TA Mailboxes</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 3: Groq AI Assistant (Tricky Questions solver) -->
+  <div id="tab-ai" class="tab-content">
+    <div class="form-group">
+      <label>Ask Groq AI Any Job Screening Question</label>
+      <textarea id="ai-question-input" placeholder="e.g. Why do you want to join our company? Or: Describe your experience with ISO 8583 / payment switches."></textarea>
+    </div>
+
+    <button id="btn-generate-ai-answer" class="btn-primary" style="font-size: 11px; padding: 9px;">
+      <span>🤖 Generate Tailored SDET Answer</span>
+    </button>
+
+    <div id="ai-output-container" class="ai-output-box">
+      <button id="ai-copy-btn" class="ai-copy-btn">Copy</button>
+      <p id="ai-output-text"></p>
+    </div>
+  </div>
+
+  <!-- Tab 4: Settings -->
+  <div id="tab-settings" class="tab-content">
+    <div class="form-group">
+      <label>Groq API Key</label>
+      <input type="password" id="set-groq-key" placeholder="gsk_...">
+    </div>
+
+    <div class="form-group">
+      <label>Groq AI Model</label>
+      <select id="set-groq-model">
+        <option value="qwen/qwen3.8-27b">qwen/qwen3.8-27b (Fast & Precise SDET Logic)</option>
+        <option value="openai/gpt-oss-120b">openai/gpt-oss-120b (High Reasoning)</option>
+        <option value="openai/gpt-oss-20b">openai/gpt-oss-20b (Ultra Fast)</option>
+        <option value="groq/compound">groq/compound</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-top: 12px;">
+      <input type="checkbox" id="set-ai-custom-q" style="width: auto;" checked>
+      <label for="set-ai-custom-q" style="margin: 0; text-transform: none; cursor: pointer;">Auto-Answer Open-Ended ATS Questions with AI</label>
+    </div>
+
+    <button id="btn-save-settings" class="btn-save">Save Settings</button>
+  </div>
+
+  <script src="defaultProfile.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

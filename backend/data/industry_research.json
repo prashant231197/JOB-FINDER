@@ -1,0 +1,389 @@
+{
+  "summary": "Industry Research & Top High-Package Employers for SDET, QA, Manual Testing, and Fintech Domains in India (3-6 Years Experience, CTC: ₹18 - ₹42 LPA)",
+  "candidateContext": {
+    "name": "Prashant Kumar Ary",
+    "currentCompany": "Corecard India Pvt. Ltd",
+    "currentRole": "SDET-I (3.5 YOE)",
+    "targetPackage": "₹18,00,000 - ₹34,00,000 / $85,000",
+    "noticePeriod": "60 days (Negotiable to 30 days)",
+    "coreStrengths": [
+      "Corecard Card Issuing & ISO 8583 Payment Switch Testing",
+      "RestAssured API Automation & Microservices Validation",
+      "Playwright & Selenium Web UI Automation (Python / Java)",
+      "Manual & Functional Testing, Test Cases, Boundary, JIRA, UAT",
+      "CI/CD Integration (GitHub Actions / Jenkins / Docker)"
+    ]
+  },
+  "strategy10Days": [
+    {
+      "step": 1,
+      "title": "Filter & Apply Within First 24 Hours of Posting",
+      "description": "Recruiters review the first 30-50 applicants. Applying on Day 5 drops callback chances to below 3%. Use the 'Today (< 24h)' freshness filter on Naukri and LinkedIn."
+    },
+    {
+      "step": 2,
+      "title": "90%+ ATS Keyword Injection",
+      "description": "Every ATS (Workday, Taleo, Greenhouse, Lever, Naukri) screens resumes algorithmically. Ensure mandatory keywords (Playwright, RestAssured, ISO 8583, POM, JIRA, TestNG, Boundary Value) appear verbatim in your application."
+    },
+    {
+      "step": 3,
+      "title": "Highlight Immediate Notice Period Advantage",
+      "description": "80% of recruiters reject 90-day notice candidates. Prominently display: '30 Days Notice Period (Negotiable / Immediate Buyout Available)' on your headline and recruiter messages."
+    },
+    {
+      "step": 4,
+      "title": "2-Step Direct Recruiter & Hiring Manager Outreach",
+      "description": "Don't just click Apply. Send a direct LinkedIn connection note or email to the Technical Recruiter / QA Engineering Manager using the pre-built 1-click outreach templates."
+    }
+  ],
+  "industries": [
+    {
+      "id": "fintech",
+      "name": "Fintech, Banking & Payments (BFSI)",
+      "badge": "Highest Pay (₹20 - ₹42 LPA)",
+      "description": "Payment Gateways, Card Issuers, Switch Engines, Neobanks, Core Banking & Real-Time Settlement",
+      "topSkills": ["ISO 8583", "RestAssured", "Payment Gateway", "Card Processing", "UPI Switch", "Python/Java", "Kafka"],
+      "companies": [
+        {
+          "name": "Razorpay",
+          "tier": "Tier-1 Fintech Unicorn",
+          "hiringRoles": ["SDET II", "Senior QA Automation", "Lead SDET"],
+          "salaryRange": "₹22 - ₹36 LPA",
+          "locations": ["Bengaluru"],
+          "techStack": "Playwright, RestAssured, Python, Go, Kafka, Docker",
+          "domainFocus": "Payment Gateway, Subscriptions, Neobanking X, Thirdwatch Fraud",
+          "careerUrl": "https://razorpay.com/jobs/",
+          "recruiterSearchQuery": "Razorpay Technical Recruiter QA SDET Bengaluru",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "PhonePe",
+          "tier": "Tier-1 Fintech Leader",
+          "hiringRoles": ["Senior QA Engineer", "SDET II", "Test Automation Lead"],
+          "salaryRange": "₹24 - ₹38 LPA",
+          "locations": ["Bengaluru", "Pune"],
+          "techStack": "RestAssured, Selenium, Java, Python, ISO 8583, Docker",
+          "domainFocus": "UPI Switch, QR Merchant Payments, Switch High-Concurrency, Insurance",
+          "careerUrl": "https://www.phonepe.com/careers/",
+          "recruiterSearchQuery": "PhonePe Talent Acquisition SDET QA Bengaluru",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "Corecard Software India",
+          "tier": "Card Processing Switch Pioneer",
+          "hiringRoles": ["SDET II", "Senior SDET", "QA Lead"],
+          "salaryRange": "₹18 - ₹30 LPA",
+          "locations": ["Bhopal", "Remote (India)"],
+          "techStack": "ISO 8583, Card Processing, RestAssured, Python, SQL",
+          "domainFocus": "Card Issuing, MTI 0100/0200 Switch Reversals, Credit Accounting",
+          "careerUrl": "https://www.corecard.com/careers",
+          "recruiterSearchQuery": "Corecard Software HR Recruiter Bhopal",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Pine Labs",
+          "tier": "Merchant Commerce & POS Leader",
+          "hiringRoles": ["Lead SDET", "Senior QA Automation", "SDET II"],
+          "salaryRange": "₹22 - ₹35 LPA",
+          "locations": ["Noida", "Bengaluru", "Remote"],
+          "techStack": "Playwright, Selenium, RestAssured, Python, POS Protocols",
+          "domainFocus": "Smart POS Terminals, Merchant Acquiring, Buy-Now-Pay-Later (Qfix)",
+          "careerUrl": "https://www.pinelabs.com/careers",
+          "recruiterSearchQuery": "Pine Labs Talent Acquisition SDET Noida",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "CRED",
+          "tier": "Elite Fintech Unicorn",
+          "hiringRoles": ["SDET II", "Staff SDET"],
+          "salaryRange": "₹26 - ₹45 LPA",
+          "locations": ["Bengaluru"],
+          "techStack": "Playwright, Java, RestAssured, Kafka, Microservices",
+          "domainFocus": "Credit Card Bill Pay Rails, CRED Pay, Rewards Settlement Engine",
+          "careerUrl": "https://careers.cred.club/",
+          "recruiterSearchQuery": "CRED Recruiter SDET Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Slice",
+          "tier": "Fast-Growing Challenger Bank",
+          "hiringRoles": ["Senior QA Engineer", "SDET II"],
+          "salaryRange": "₹20 - ₹34 LPA",
+          "locations": ["Bengaluru"],
+          "techStack": "Python, Playwright, RestAssured, JMeter, SQL",
+          "domainFocus": "Credit Card Engine, UPI Payments, Small Finance Bank Integration",
+          "careerUrl": "https://www.sliceit.com/careers",
+          "recruiterSearchQuery": "Slice Talent Acquisition QA SDET Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Jupiter Money",
+          "tier": "Leading Neobank",
+          "hiringRoles": ["SDET II", "Senior QA Automation"],
+          "salaryRange": "₹20 - ₹32 LPA",
+          "locations": ["Bengaluru", "Mumbai"],
+          "techStack": "Playwright, RestAssured, Java, UPI Switch, SQL",
+          "domainFocus": "Digital Savings Account, Debit Card Switch, Real-Time Accounting",
+          "careerUrl": "https://jupiter.money/careers/",
+          "recruiterSearchQuery": "Jupiter Money Recruiter SDET Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Zeta",
+          "tier": "Banking Tech Unicorn",
+          "hiringRoles": ["Senior SDET", "Lead QA"],
+          "salaryRange": "₹25 - ₹40 LPA",
+          "locations": ["Bengaluru", "Hyderabad"],
+          "techStack": "Playwright, RestAssured, Java, ISO 8583, Docker",
+          "domainFocus": "Next-Gen Credit Card Switch, Cloud-Native Core Banking (Tachyon)",
+          "careerUrl": "https://www.zeta.tech/careers/",
+          "recruiterSearchQuery": "Zeta Tech Recruiter QA SDET Bengaluru",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "Juspay",
+          "tier": "Payment Rails & Checkout Platform",
+          "hiringRoles": ["Lead SDET", "SDET II"],
+          "salaryRange": "₹24 - ₹38 LPA",
+          "locations": ["Bengaluru", "Remote"],
+          "techStack": "Playwright, Python, RestAssured, JMeter, 3DS Vault",
+          "domainFocus": "Express Checkout SDK, Card Vault, Multi-Bank UPI Routing Switch",
+          "careerUrl": "https://juspay.in/careers",
+          "recruiterSearchQuery": "Juspay Recruiter SDET Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Barclays India",
+          "tier": "Global Investment Bank & Switch Hub",
+          "hiringRoles": ["Senior SDET", "Lead QA Automation"],
+          "salaryRange": "₹20 - ₹34 LPA",
+          "locations": ["Pune", "Chennai"],
+          "techStack": "ISO 8583, ISO 20022, RestAssured, Selenium, Java, SQL",
+          "domainFocus": "Retail Card Switch, SWIFT/ISO 20022 Messaging, Core Banking",
+          "careerUrl": "https://search.jobs.barclays/location/india-jobs/",
+          "recruiterSearchQuery": "Barclays India Technical Recruiter SDET Pune",
+          "hiringIntensity": "Very High"
+        }
+      ]
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce & Quick-Commerce",
+      "badge": "High Concurrency (₹18 - ₹36 LPA)",
+      "description": "High-throughput Cart, Checkout, Order Matching, Logistics & Instant Payments",
+      "topSkills": ["Playwright", "RestAssured", "Payment Gateway", "Kafka", "Python/Java", "JMeter", "SQL"],
+      "companies": [
+        {
+          "name": "Flipkart",
+          "tier": "India E-Commerce Pioneer",
+          "hiringRoles": ["SDET II", "Senior SDET"],
+          "salaryRange": "₹22 - ₹36 LPA",
+          "locations": ["Bengaluru"],
+          "techStack": "Playwright, RestAssured, Java, Python, Kafka, JMeter",
+          "domainFocus": "Big Billion Days Checkout, Payment Gateway Integration, Order Lifecycle",
+          "careerUrl": "https://www.flipkartcareers.com/",
+          "recruiterSearchQuery": "Flipkart Recruiter SDET Bengaluru",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "Amazon Development Centre India",
+          "tier": "Global Tech Giant",
+          "hiringRoles": ["SDET II", "Quality Assurance Engineer II"],
+          "salaryRange": "₹24 - ₹40 LPA",
+          "locations": ["Bengaluru", "Hyderabad"],
+          "techStack": "Selenium, Playwright, Java, Python, AWS, SQL",
+          "domainFocus": "Shopping Portal, Checkout Switches, Prime Delivery Tracking",
+          "careerUrl": "https://www.amazon.jobs/en/locations/bangalore-india",
+          "recruiterSearchQuery": "Amazon India Recruiter SDET Bengaluru",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "Swiggy",
+          "tier": "Food & Grocery Delivery Unicorn",
+          "hiringRoles": ["Senior QA Engineer", "SDET II"],
+          "salaryRange": "₹20 - ₹34 LPA",
+          "locations": ["Bengaluru"],
+          "techStack": "RestAssured, Playwright, Python, SQL, Kafka",
+          "domainFocus": "Order Tracking, Delivery Partner Dispatch Switch, Multi-Gateway Payment",
+          "careerUrl": "https://careers.swiggy.com/",
+          "recruiterSearchQuery": "Swiggy Recruiter SDET QA Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Blinkit (Zomato)",
+          "tier": "Quick-Commerce Market Leader",
+          "hiringRoles": ["SDET II", "Senior QA Automation"],
+          "salaryRange": "₹22 - ₹35 LPA",
+          "locations": ["Gurgaon", "Delhi NCR", "Remote"],
+          "techStack": "Playwright, RestAssured, Python, Java, SQL",
+          "domainFocus": "10-Minute Dark Store Picking, Rider Routing, Payment Webhooks",
+          "careerUrl": "https://blinkit.com/careers",
+          "recruiterSearchQuery": "Blinkit Zomato Recruiter SDET Gurgaon",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "Zepto",
+          "tier": "Fastest Growing Quick-Commerce",
+          "hiringRoles": ["Senior QA Automation Engineer", "SDET II"],
+          "salaryRange": "₹22 - ₹36 LPA",
+          "locations": ["Bengaluru", "Mumbai"],
+          "techStack": "RestAssured, Playwright, Python, SQL, JMeter",
+          "domainFocus": "High-Concurrency Checkout Cart, Payment Tokenization, Order Dispatch",
+          "careerUrl": "https://www.zeptonow.com/careers",
+          "recruiterSearchQuery": "Zepto Recruiter SDET Bengaluru",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "Meesho",
+          "tier": "Social Commerce & Reseller Unicorn",
+          "hiringRoles": ["SDET II", "Lead QA"],
+          "salaryRange": "₹20 - ₹34 LPA",
+          "locations": ["Bengaluru", "Remote"],
+          "techStack": "Playwright, RestAssured, Java, Python, Kafka, SQL",
+          "domainFocus": "Multi-Tenant Marketplace, Seller Payout Settlement, Catalog Search",
+          "careerUrl": "https://www.meesho.io/jobs",
+          "recruiterSearchQuery": "Meesho Talent Acquisition SDET Bengaluru",
+          "hiringIntensity": "High"
+        }
+      ]
+    },
+    {
+      "id": "saas",
+      "name": "Enterprise SaaS & Developer Tools",
+      "badge": "Global Standards (₹22 - ₹42 LPA)",
+      "description": "Developer Platforms, Testing Clouds, Cloud Microservices & Distributed Architectures",
+      "topSkills": ["Playwright", "Selenium", "RestAssured", "Python/Java", "Docker", "CI/CD", "API Testing"],
+      "companies": [
+        {
+          "name": "BrowserStack",
+          "tier": "Global Testing Infrastructure Leader",
+          "hiringRoles": ["SDET II", "Senior SDET"],
+          "salaryRange": "₹24 - ₹38 LPA",
+          "locations": ["Mumbai", "Bengaluru", "Remote"],
+          "techStack": "Playwright, Selenium, Python, Java, RestAssured, Docker, CI/CD",
+          "domainFocus": "Real Device Cloud, Cross-Browser Grids, API Automation Harnesses",
+          "careerUrl": "https://www.browserstack.com/careers",
+          "recruiterSearchQuery": "BrowserStack Technical Recruiter SDET Mumbai Bengaluru",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "Postman",
+          "tier": "API Platform Leader",
+          "hiringRoles": ["Senior QA Automation Engineer", "SDET II"],
+          "salaryRange": "₹22 - ₹36 LPA",
+          "locations": ["Bengaluru", "Remote"],
+          "techStack": "Postman, RestAssured, JavaScript, Python, Docker, CI/CD",
+          "domainFocus": "API Workspaces, Automated Mock Servers, CLI Test Runners",
+          "careerUrl": "https://www.postman.com/careers/",
+          "recruiterSearchQuery": "Postman Talent Acquisition SDET QA Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Adobe India",
+          "tier": "Global Software Leader",
+          "hiringRoles": ["Senior QA Engineer", "Lead Quality Engineer"],
+          "salaryRange": "₹24 - ₹38 LPA",
+          "locations": ["Noida", "Bengaluru"],
+          "techStack": "Playwright, Selenium, RestAssured, Python, Java, SQL",
+          "domainFocus": "Adobe Experience Cloud, Document Cloud APIs, Cross-Browser Reliability",
+          "careerUrl": "https://careers.adobe.com/us/en/search-results?m=3&location=India",
+          "recruiterSearchQuery": "Adobe India Recruiter QA SDET Noida Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Atlassian India",
+          "tier": "Enterprise Collaboration Leader",
+          "hiringRoles": ["SDET II", "Senior Quality Engineer"],
+          "salaryRange": "₹26 - ₹42 LPA",
+          "locations": ["Bengaluru", "Remote"],
+          "techStack": "Playwright, Python, Java, RestAssured, AWS, Docker",
+          "domainFocus": "Jira & Confluence Cloud Reliability, Microservices Resilience",
+          "careerUrl": "https://www.atlassian.com/company/careers/bengaluru",
+          "recruiterSearchQuery": "Atlassian India Recruiter SDET Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "SAP Labs India",
+          "tier": "Enterprise ERP Powerhouse",
+          "hiringRoles": ["Senior QA Automation Engineer", "Quality Specialist"],
+          "salaryRange": "₹20 - ₹34 LPA",
+          "locations": ["Bengaluru", "Gurgaon"],
+          "techStack": "Selenium, Playwright, RestAssured, Java, Python, SQL",
+          "domainFocus": "S/4HANA Cloud ERP, Enterprise REST APIs, Automated Release Gates",
+          "careerUrl": "https://jobs.sap.com/search/?q=&locationsearch=India",
+          "recruiterSearchQuery": "SAP Labs India Recruiter QA SDET Bengaluru",
+          "hiringIntensity": "Very High"
+        }
+      ]
+    },
+    {
+      "id": "manual_functional",
+      "name": "Manual Testing & Functional Quality Engineering",
+      "badge": "High Demand (₹14 - ₹26 LPA)",
+      "description": "Functional Test Design, Negative Scenarios, UAT, JIRA Defect Lifecycle & Banking Core Workflows",
+      "topSkills": ["Manual Testing", "Functional Testing", "Regression Testing", "JIRA", "Test Cases", "UAT", "SQL", "Postman"],
+      "companies": [
+        {
+          "name": "HDFC Bank Technology Centre",
+          "tier": "India #1 Private Bank",
+          "hiringRoles": ["Senior Manual QA Lead", "Quality Assurance Specialist"],
+          "salaryRange": "₹15 - ₹25 LPA",
+          "locations": ["Mumbai", "Pune"],
+          "techStack": "Manual Testing, Functional Testing, Regression, Core Banking, JIRA, SQL",
+          "domainFocus": "Retail Banking, NEFT/RTGS/UPI Workflows, Branch Systems, UAT",
+          "careerUrl": "https://www.hdfcbank.com/personal/about-us/careers",
+          "recruiterSearchQuery": "HDFC Bank Recruiter QA Manual Testing Mumbai Pune",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "ICICI Securities",
+          "tier": "Leading Retail Brokerage & Wealth Tech",
+          "hiringRoles": ["Senior Functional QA", "Quality Specialist"],
+          "salaryRange": "₹16 - ₹26 LPA",
+          "locations": ["Mumbai", "Bengaluru"],
+          "techStack": "Manual Testing, Functional QA, Payment Gateway, JIRA, SQL, Postman",
+          "domainFocus": "Live Market Trading, Fund Transfer Gateways, Demat Verification",
+          "careerUrl": "https://www.icicisecurities.com/careers",
+          "recruiterSearchQuery": "ICICI Securities Talent Acquisition QA Mumbai",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Tata Neu (Tata Digital)",
+          "tier": "Super App Pioneer",
+          "hiringRoles": ["Functional Test Lead", "Senior QA Analyst"],
+          "salaryRange": "₹18 - ₹28 LPA",
+          "locations": ["Mumbai", "Bengaluru"],
+          "techStack": "Manual Testing, Functional Testing, UPI Switch, Payment Gateway, JIRA",
+          "domainFocus": "Cross-Platform Loyalty, Tata Pay Checkout, Partner Brand Integration",
+          "careerUrl": "https://www.tatadigital.com/careers",
+          "recruiterSearchQuery": "Tata Digital Recruiter QA Manual Testing Bengaluru",
+          "hiringIntensity": "High"
+        },
+        {
+          "name": "Infosys Finacle",
+          "tier": "Global Core Banking Software Leader",
+          "hiringRoles": ["Senior QA Analyst - Core Banking", "Functional Test Lead"],
+          "salaryRange": "₹14 - ₹24 LPA",
+          "locations": ["Bengaluru", "Pune", "Hyderabad"],
+          "techStack": "Manual Testing, Functional Testing, ISO 8583, Core Banking, JIRA, SQL",
+          "domainFocus": "Finacle Core Banking Parameter Configuration, Transaction Workflows",
+          "careerUrl": "https://www.edgeverve.com/finacle/careers/",
+          "recruiterSearchQuery": "Infosys Finacle Recruiter QA Testing Bengaluru",
+          "hiringIntensity": "Very High"
+        },
+        {
+          "name": "Wipro Digital (Banking & Financial Services)",
+          "tier": "Tier-1 Global IT & BFSI Consulting",
+          "hiringRoles": ["Functional QA Specialist", "Test Lead"],
+          "salaryRange": "₹14 - ₹24 LPA",
+          "locations": ["Bengaluru", "Hyderabad", "Pune"],
+          "techStack": "Manual Testing, Card Processing, Payment Gateway, JIRA, SQL, Postman",
+          "domainFocus": "Credit Card Issuing, Loan Origination, Global Bank Gateway Integration",
+          "careerUrl": "https://careers.wipro.com/",
+          "recruiterSearchQuery": "Wipro Recruiter QA Manual Testing BFSI Bengaluru",
+          "hiringIntensity": "Very High"
+        }
+      ]
+    }
+  ]
+}

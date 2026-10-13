@@ -1,0 +1,44 @@
+{
+  "maxApplicationsPerSession": 10,
+  "minMatchScore": 70,
+  "minSalary": 75000,
+  "preferredLocations": [
+    "Remote",
+    "Bengaluru",
+    "Hyderabad",
+    "United States",
+    "San Francisco",
+    "London",
+    "Worldwide"
+  ],
+  "requiredSkills": [
+    "Playwright",
+    "Selenium",
+    "Test Automation"
+  ],
+  "excludedCompanies": [
+    "Revature",
+    "CyberCoders",
+    "SpamCorp"
+  ],
+  "excludedJobTitles": [
+    "Director",
+    "Vice President",
+    "VP",
+    "Sales QA",
+    "HR Specialist"
+  ],
+  "autoSubmitTrusted": false,
+  "headless": false,
+  "prioritizedTitles": [
+    "QA Engineer",
+    "Software QA Engineer",
+    "QA Automation Engineer",
+    "Test Engineer",
+    "Software Tester",
+    "SDET",
+    "QA Analyst",
+    "Manual Tester",
+    "Automation Tester"
+  ]
+}
